@@ -5,20 +5,20 @@
 class Fakerforge < Formula
   desc "Pull FakerForge synthetic data directly into your local database"
   homepage "https://fakerforge.com/docs/fakerforge-cli"
-  version "0.2.0"
+  version "0.3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.2.0/fakerforge_darwin_amd64.tar.gz"
-      sha256 "2a3aa47f7e71e5b5843cefd502e37cd1ca4f86e8db4294df5c41434022243db6"
+      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.3.0/fakerforge_darwin_amd64.tar.gz"
+      sha256 "5a46aaef18a0c68774b77799e1baceac1ae8eacac9b59272e2a98ec99a788d0a"
 
       define_method(:install) do
         bin.install "fakerforge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.2.0/fakerforge_darwin_arm64.tar.gz"
-      sha256 "dd3cbfd2f47e8605113377308b6550aba1d690b7591b25d30e3849caba58511e"
+      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.3.0/fakerforge_darwin_arm64.tar.gz"
+      sha256 "aecc67861be72b9d56427a1522c24b5beeafa27e26afdd50cd5aecfd3f85eadb"
 
       define_method(:install) do
         bin.install "fakerforge"
@@ -28,15 +28,15 @@ class Fakerforge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.2.0/fakerforge_linux_amd64.tar.gz"
-      sha256 "957addf574530b1fe277e39bf8feadacbee9ae7158d199ebe50645b2cbce8eda"
+      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.3.0/fakerforge_linux_amd64.tar.gz"
+      sha256 "72669baedff96849ac0292e86225d7cf708dd12ac6aab8af66c2eb2903275052"
       define_method(:install) do
         bin.install "fakerforge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.2.0/fakerforge_linux_arm64.tar.gz"
-      sha256 "437bd9ea5480b6232d51577535c7f32765c0af7619521c2825d41ea65802f58e"
+      url "https://github.com/kwasii1/fakerforge-db-agent/releases/download/v0.3.0/fakerforge_linux_arm64.tar.gz"
+      sha256 "8ba3bc5938fb347bc00bb38d3ba1057da6913a6034e6e9c1fbe2f5572b4edd02"
       define_method(:install) do
         bin.install "fakerforge"
       end
